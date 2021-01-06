@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+   
+    <title>EmployeePerformanceForm</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <style>
+      .s{
+        font-weight: 500;
+        color:crimson;
+    
+    
+      }
+      
+      
+      </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Employee Performance Analysis</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/employee_pch">Employee PerformanceScore Check</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/employee_ach">Employee Attrition Check</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/employee_sch">Employee Salary Analysis</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="container">
+        <div class="row">
+          <div class="col">
+               <form method="POST" action="/predict_employee_pch"><br>
+                  <div class="row">
+                    
+                      <label for="MarriedId">Married id</label>
+                      <input type="text" class="form-control" placeholder="MarriedID" name="MarriedID"><br>
+                      <label for="MaritalStatusID">Maritalstatus id</label>
+                      <input type="text" class="form-control" placeholder="MaritalStatusID" name="MaritalStatusID"><br>
+                      <label for="GenderID">Genderid</label>
+                      <input type="text" class="form-control" placeholder="GenderID" name="GenderID"><br>
+                      <label for="EmpStatusID">Empstatus Id</label>
+                      <input type="text" class="form-control" placeholder="EmpStatusID" name="EmpStatusID"><br>
+                      <label for="DeptID">Department id</label>
+                      <input type="text" class="form-control" placeholder="DeptID" name="DeptID"><br>
+                      <label for="FromDiversityJobFairID">Jobfair id</label>
+                      <input type="text" class="form-control" placeholder="FromDiversityJobFairID" name="FromDiversityJobFairID"><br>
+                      <label for="PayRate">Payrate</label>
+                      <input type="text" class="form-control" placeholder="PayRate" name="PayRate"><br>
+                      <label for="Termd">Term Id</label>
+                      <input type="text" class="form-control" placeholder="Termd" name="Termd"><br>
+                      <label for="PositionID">Position id</label>
+                      <input type="text" class="form-control" placeholder="PositionID" name="PositionID"><br>
+                      <label for="ManagerID">Manager Id</label>
+                      <input type="text" class="form-control" placeholder="ManagerID" name="ManagerID"><br>
+                      <label for="EmpSatisfaction">Employee Satisfaction</label>
+                      <input type="text" class="form-control" placeholder="EmpSatisfaction" name="EmpSatisfaction"><br>
+                     
+                      <label for="SpecialProjectsCount">Project Count<Projectscount/label>
+                      <input type="text" class="form-control" placeholder="SpecialProjectsCount" name="SpecialProjectsCount"><br>
+                        <input type="submit" class="form-control">
+                  </div>
+                </form>
+          </div>
+          <div class="col">
+           
+            <ul class="list-group"> <br><br>
+              <li class="list-group-item">MarriedID:<span class="s"> Married == 1|| Single ==0||</span></li>
+              <li class="list-group-item">MaritalStatusID:<span class="s"> Married == 1 || Divorced ==0 || Single == 2||Seperated ==3||Widowed ==4||</span></li>
+              <li class="list-group-item">GenderID:<span class="s"> Female == 0|| Male == 1</span></li>
+              <li class="list-group-item">EmpStatusID :<span class="s">Active == 1 || Voluntarily Terminated == 5|| Terminated For Cause == 4||Future Start == 2|| Leave of Absense == 3</span></li>
+              <li class="list-group-item">DeptID:<span class="s">Admin Offices == 1||Sales == 6||IT/IS == 3||PRODCTION == 5||EXECUTIVE OFFICE == 2||Software Engineering == 4</span></li>
+              <li class="list-group-item">FromDiversityJobFairID:<span class="s"> Enter 1 Or 0</span></li>
+              <li class="list-group-item">PayRate:<span class="s">Between 20 to 60 Per Hour</span></li>
+              <li class="list-group-item">Termd:<span class="s">STILL EMPLOYEED == 0|| CAREER CHANGE OR ANOTHER CAREER == 1</span></li>
+              <li class="list-group-item">PositionID :<span class="s"> Accountant I == 1|| Administrative Assistant == 2||Area Sales Manager ==3||BI Developer == 4||BI Director == 5||CIO ==6||Data Architect == 7||Database Administrator == 8||Data Analyst == 9||Director of Operations == 10</span></li>
+              <li class="list-group-item">Manager Id: <span class="s">Enter Manager Id from 1 to 22</span></li>
+              <li class="list-group-item">Employee Satisfaction :<span class="s"> 1 to 5</span></li>
+              <li class="list-group-item">Projects Count : <span class="s">1 to 10</span></li>
+              
+            </ul>
+          </div>
+        </div>
+       
+</body>
+</html>
